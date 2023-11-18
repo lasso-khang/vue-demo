@@ -68,8 +68,9 @@
                         <option value="FR">France</option>
                         <option value="DE">Germany</option>
                     </select>
-                    
                 </div>
+
+                <button @click="send_data" class="px-6 py-2 rounded bg-stone-400 hover:bg-stone-500 text-stone-100">Send data to API</button>
             </div>
             <div class="px-3">
                 <h2 class="mb-5">Data</h2>
@@ -81,12 +82,23 @@
                     <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900">Programming languages: {{ programming_languages.join(', ') }}</label>
                     <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900">Country: {{ country }}</label>
                 </div>
+
+                <div class="mb-6">
+                    <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900">Data sent</label>
+                    <pre>{{ data_sent }}</pre>
+                </div>
+
+                <div class="mb-6">
+                    <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900">API response</label>
+                    <pre>{{ api_res }}</pre>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="./tailwindcss-3.3.5.js"></script>
     <script src="./vue.global-3.3.8.js"></script>
+    <script src="./axios.min.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>
